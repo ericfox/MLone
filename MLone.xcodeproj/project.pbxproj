@@ -12,6 +12,7 @@
 		078FC8AA21CC853400430FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078FC8A821CC853400430FBE /* Main.storyboard */; };
 		078FC8AC21CC853500430FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078FC8AB21CC853500430FBE /* Assets.xcassets */; };
 		078FC8AF21CC853500430FBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078FC8AD21CC853500430FBE /* LaunchScreen.storyboard */; };
+		9B73954517DA36F527D22941 /* Pods_MLone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3691BE436357446ED9C3F330 /* Pods_MLone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		078FC8AB21CC853500430FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		078FC8AE21CC853500430FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		078FC8B021CC853500430FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3691BE436357446ED9C3F330 /* Pods_MLone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E826AB2272B8DAC04AA676 /* Pods-MLone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLone.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLone/Pods-MLone.release.xcconfig"; sourceTree = "<group>"; };
+		775CA3F2EF2145349CD23E5F /* Pods-MLone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLone/Pods-MLone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B73954517DA36F527D22941 /* Pods_MLone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				078FC8A321CC853400430FBE /* MLone */,
 				078FC8A221CC853400430FBE /* Products */,
+				51451AEDE9E376BC788FFB85 /* Pods */,
+				D7E84284DA188B987D9DD5D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MLone;
 			sourceTree = "<group>";
 		};
+		51451AEDE9E376BC788FFB85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				775CA3F2EF2145349CD23E5F /* Pods-MLone.debug.xcconfig */,
+				73E826AB2272B8DAC04AA676 /* Pods-MLone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7E84284DA188B987D9DD5D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3691BE436357446ED9C3F330 /* Pods_MLone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 078FC8B321CC853500430FBE /* Build configuration list for PBXNativeTarget "MLone" */;
 			buildPhases = (
+				F1F91609AB0129925C841311 /* [CP] Check Pods Manifest.lock */,
 				078FC89D21CC853400430FBE /* Sources */,
 				078FC89E21CC853400430FBE /* Frameworks */,
 				078FC89F21CC853400430FBE /* Resources */,
+				7AE2E3A51E05D2D22CEF86ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AE2E3A51E05D2D22CEF86ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLone/Pods-MLone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MaLiang/MaLiang.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaLiang.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLone/Pods-MLone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F91609AB0129925C841311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		078FC89D21CC853400430FBE /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		078FC8B421CC853500430FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 775CA3F2EF2145349CD23E5F /* Pods-MLone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		078FC8B521CC853500430FBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E826AB2272B8DAC04AA676 /* Pods-MLone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
