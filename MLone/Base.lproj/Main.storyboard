@@ -17,12 +17,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Canvas" customModule="MaLiang">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqz-cC-k70">
+                                <rect key="frame" x="30" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Qaa-3j-dpE"/>
+                                    <constraint firstAttribute="height" constant="32" id="UdK-mf-TDy"/>
+                                </constraints>
+                                <state key="normal" title="Undo" image="action-undo"/>
+                                <connections>
+                                    <action selector="Undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhY-fz-ZI3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-yn-BuM">
+                                <rect key="frame" x="82" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1fl-uR-P8S"/>
+                                    <constraint firstAttribute="width" constant="32" id="Nfx-Nz-0dB"/>
+                                </constraints>
+                                <state key="normal" title="Redo" image="action-redo"/>
+                                <connections>
+                                    <action selector="Redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSZ-Fn-0ny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-pf-D2r">
+                                <rect key="frame" x="1060" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="a6l-YI-0fG"/>
+                                    <constraint firstAttribute="height" constant="32" id="enz-MV-W6I"/>
+                                </constraints>
+                                <state key="normal" title="Clear" image="circle-x"/>
+                                <connections>
+                                    <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bh6-2h-Ot9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-ku-OED">
+                                <rect key="frame" x="988" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="8DU-tQ-xXe"/>
+                                    <constraint firstAttribute="width" constant="32" id="F0R-0S-AaP"/>
+                                </constraints>
+                                <state key="normal" title="Share" image="cloud"/>
+                                <connections>
+                                    <action selector="Share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBZ-gc-qQY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-qu-5wR">
+                                <rect key="frame" x="936" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="i3C-zG-Nrk"/>
+                                    <constraint firstAttribute="height" constant="32" id="mbX-M5-5fe"/>
+                                </constraints>
+                                <state key="normal" title="Save" image="circle-check"/>
+                                <connections>
+                                    <action selector="Save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98i-ER-wlL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oXu-pf-D2r" secondAttribute="bottom" constant="20" id="06B-qR-KCt"/>
+                            <constraint firstItem="vqz-cC-k70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4F2-E4-DYt"/>
+                            <constraint firstItem="9e4-yn-BuM" firstAttribute="leading" secondItem="vqz-cC-k70" secondAttribute="trailing" constant="20" id="GKH-Cw-KIV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vqz-cC-k70" secondAttribute="bottom" constant="20" id="Gfg-nU-RSU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fai-ku-OED" secondAttribute="bottom" constant="20" id="KpA-NE-SNG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gak-qu-5wR" secondAttribute="bottom" constant="20" id="TBV-d7-FKU"/>
+                            <constraint firstItem="Fai-ku-OED" firstAttribute="leading" secondItem="gak-qu-5wR" secondAttribute="trailing" constant="20" id="V4B-wD-Ga0"/>
+                            <constraint firstItem="oXu-pf-D2r" firstAttribute="leading" secondItem="Fai-ku-OED" secondAttribute="trailing" constant="40" id="ekN-LF-FyS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9e4-yn-BuM" secondAttribute="bottom" constant="20" id="gmx-zN-fh3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXu-pf-D2r" secondAttribute="trailing" constant="20" id="tOg-RC-f2i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.66906474820144" y="136.69064748201438"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="action-redo" width="32" height="32"/>
+        <image name="action-undo" width="32" height="32"/>
+        <image name="circle-check" width="32" height="32"/>
+        <image name="circle-x" width="32" height="32"/>
+        <image name="cloud" width="32" height="32"/>
+    </resources>
 </document>
