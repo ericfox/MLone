@@ -106,8 +106,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let c = Canvas(frame: CGRect(x: 0, y: 0, width: 1024, height: 1024))
+        let c = Canvas(frame: CGRect(x: 0, y: 0, width: 1366, height: 1366))
+        //let c = Canvas(frame: CGRect(x: 0, y: 0, width: 1024, height: 1024))
         //let c = Canvas(frame: CGRect(x: 0, y: 0, width: 2048, height: 2048))
         view.addSubview(c)
         view.sendSubviewToBack(c)
