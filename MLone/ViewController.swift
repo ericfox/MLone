@@ -17,6 +17,17 @@ import MaLiang
 class ViewController: UIViewController {
 
     weak var canvas: Canvas!
+    @IBOutlet var PenInfor: UILabel!
+    var thepen: Int = 0
+    
+    var brushNames = ["Pen", "Pencil", "Brush"]
+    var brushes: [Brush] = []
+    var color: UIColor {
+        return UIColor(red: r, green: g, blue: b, alpha: 1)
+    }
+    var r: CGFloat = 0
+    var g: CGFloat = 0
+    var b: CGFloat = 0
     
     // ---------------- Actions -------------------------------------------------------------------------------------------------
     
@@ -28,11 +39,17 @@ class ViewController: UIViewController {
         canvas.redo()
     }
 
+    @IBAction func Pen(_ sender: UIButton) {
+        thepen += 1
+        thepen = thepen > brushes.count - 1 ? 0 : thepen
+        setPen(pIndex: thepen)
+    }
+    
     @IBAction func Save(_ sender: UIButton) {
         //print("OUTPUT BUTTON")
         let tImage = canvas.snapshot()! // 1024X1024
         let imgData = UIImage.pngData(tImage)
-        let fileName = NSHomeDirectory() + "/Documents/OUTPUT" + getDateTime() + ".png"
+        let fileName = NSHomeDirectory() + "/Documents/MLone" + getDateTime() + ".png"
         print("fileName=\(fileName)")
         
         let tSaveStatus = FileManager().createFile(atPath: fileName as String, contents: imgData(), attributes: nil)
@@ -80,6 +97,13 @@ class ViewController: UIViewController {
         return dateFormatter.string(from: date)
     }
 
+    func setPen(pIndex:Int) {
+        let brush = brushes[thepen]
+        brush.color = color
+        canvas.brush = brush
+        PenInfor.text = brushNames[thepen]  // + "\(brush.pointSize)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,15 +118,38 @@ class ViewController: UIViewController {
             showAlert(pTitle: "Error!", pMsg: error.localizedDescription)
         }
         
+        // add pen/size/force
+        let pen = Brush(texture: #imageLiteral(resourceName: "pen"))
+        pen.pointSize = 5
+        pen.pointStep = 1
+        pen.color = color
+        
+        let pencil = Brush(texture: #imageLiteral(resourceName: "pencil"))
+        pencil.pointSize = 3
+        pencil.pointStep = 2
+        pencil.forceSensitive = 0.3
+        pencil.opacity = 0.6
+        
+        let brush = Brush(texture: #imageLiteral(resourceName: "water-pen"))
+        brush.pointSize = 30
+        brush.pointStep = 2
+        brush.forceSensitive = 0.6
+        brush.color = color
+        
+        brushes = [pen, pencil, brush]
+        
+        setPen(pIndex: thepen)
+        
         //
         print(getDateTime())
         print(NSHomeDirectory())
-        // add pen/size/force
-        let image = UIImage(named: "water-pen.png")
-        let waterpen = Brush(texture: image!)
-        canvas.brush = waterpen
-        canvas.brush.pointSize = 20
-        canvas.brush.forceSensitive = 0.5 // 0-1
+        
+        
+        //let image = UIImage(named: "water-pen.png")
+        //let waterpen = Brush(texture: image!)
+        //canvas.brush = waterpen
+        //canvas.brush.pointSize = 20
+        //canvas.brush.forceSensitive = 0.5 // 0-1
 
     }
 
