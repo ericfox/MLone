@@ -18,63 +18,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqz-cC-k70">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqz-cC-k70">
                                 <rect key="frame" x="30" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="WCz-Ds-ybG"/>
+                                    <constraint firstAttribute="width" constant="32" id="sTD-Z7-H6p"/>
+                                </constraints>
                                 <state key="normal" title="Undo" image="action-undo"/>
                                 <connections>
                                     <action selector="Undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhY-fz-ZI3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-yn-BuM">
-                                <rect key="frame" x="82" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Redo" image="action-redo"/>
-                                <connections>
-                                    <action selector="Redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSZ-Fn-0ny"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-pf-D2r">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-pf-D2r">
                                 <rect key="frame" x="1060" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="YSa-up-htz"/>
+                                    <constraint firstAttribute="height" constant="32" id="geq-4l-eUY"/>
+                                </constraints>
                                 <state key="normal" title="Clear" image="circle-x"/>
                                 <connections>
                                     <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bh6-2h-Ot9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-ku-OED">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-ku-OED">
                                 <rect key="frame" x="988" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="aWn-La-uNc"/>
+                                    <constraint firstAttribute="width" constant="32" id="rhN-e0-2jH"/>
+                                </constraints>
                                 <state key="normal" title="Share" image="cloud"/>
                                 <connections>
                                     <action selector="Share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBZ-gc-qQY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-qu-5wR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-qu-5wR">
                                 <rect key="frame" x="936" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="FyY-dt-8bG"/>
+                                    <constraint firstAttribute="height" constant="32" id="Oke-Gb-4mw"/>
+                                </constraints>
                                 <state key="normal" title="Save" image="circle-check"/>
                                 <connections>
                                     <action selector="Save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98i-ER-wlL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eis-38-W6I">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eis-38-W6I">
                                 <rect key="frame" x="154" y="782" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="CMY-zf-OLA"/>
+                                    <constraint firstAttribute="height" constant="32" id="Gze-NR-BAt"/>
+                                </constraints>
                                 <state key="normal" title="Pen" image="brush"/>
                                 <connections>
                                     <action selector="Pen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2tE-up-oOa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PenInfor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0H-Tm-3LS">
-                                <rect key="frame" x="194" y="787" width="100" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PenInfor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0H-Tm-3LS">
+                                <rect key="frame" x="191" y="787" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="gSn-ho-HWz"/>
+                                    <constraint firstAttribute="width" constant="100" id="uyi-06-6vt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-yn-BuM">
+                                <rect key="frame" x="82" y="782" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="fdO-Xj-KQd"/>
+                                    <constraint firstAttribute="width" constant="32" id="unw-XP-jbZ"/>
+                                </constraints>
+                                <state key="normal" title="Redo" image="action-redo"/>
+                                <connections>
+                                    <action selector="Redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSZ-Fn-0ny"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vqz-cC-k70" secondAttribute="bottom" constant="20" id="40d-CN-UOl"/>
+                            <constraint firstItem="oXu-pf-D2r" firstAttribute="leading" secondItem="Fai-ku-OED" secondAttribute="trailing" constant="40" id="855-Ji-Hpw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eis-38-W6I" secondAttribute="bottom" constant="20" id="BJG-Zw-53c"/>
+                            <constraint firstItem="vqz-cC-k70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tep-hi-pzS"/>
+                            <constraint firstItem="Eis-38-W6I" firstAttribute="leading" secondItem="9e4-yn-BuM" secondAttribute="trailing" constant="40" id="WLP-EI-ODv"/>
+                            <constraint firstItem="Fai-ku-OED" firstAttribute="leading" secondItem="gak-qu-5wR" secondAttribute="trailing" constant="20" id="WwK-5b-n5e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fai-ku-OED" secondAttribute="bottom" constant="20" id="d4i-EQ-3WD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gak-qu-5wR" secondAttribute="bottom" constant="20" id="iZK-vq-kUZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oXu-pf-D2r" secondAttribute="bottom" constant="20" id="kH8-6w-9UF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K0H-Tm-3LS" secondAttribute="bottom" constant="25" id="qmM-Ey-XUh"/>
+                            <constraint firstItem="K0H-Tm-3LS" firstAttribute="leading" secondItem="Eis-38-W6I" secondAttribute="trailing" constant="5" id="tY8-cn-U66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9e4-yn-BuM" secondAttribute="bottom" constant="20" id="vaN-w1-D7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXu-pf-D2r" secondAttribute="trailing" constant="20" id="yMf-vr-Cre"/>
+                            <constraint firstItem="9e4-yn-BuM" firstAttribute="leading" secondItem="vqz-cC-k70" secondAttribute="trailing" constant="20" id="zS0-e5-0ve"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
