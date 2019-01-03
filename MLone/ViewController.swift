@@ -13,6 +13,8 @@
 
 import UIKit
 import MaLiang
+//import IGColorPicker
+
 
 class ViewController: UIViewController {
 
@@ -120,18 +122,18 @@ class ViewController: UIViewController {
         
         // add pen/size/force
         let pen = Brush(texture: #imageLiteral(resourceName: "pen"))
-        pen.pointSize = 5
+        pen.pointSize = 10 //5
         pen.pointStep = 1
         pen.color = color
         
         let pencil = Brush(texture: #imageLiteral(resourceName: "pencil"))
-        pencil.pointSize = 3
+        pencil.pointSize = 10 //3
         pencil.pointStep = 2
         pencil.forceSensitive = 0.3
         pencil.opacity = 0.6
         
         let brush = Brush(texture: #imageLiteral(resourceName: "water-pen"))
-        brush.pointSize = 30
+        brush.pointSize = 20 //30
         brush.pointStep = 2
         brush.forceSensitive = 0.6
         brush.color = color
